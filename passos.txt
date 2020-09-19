@@ -1,0 +1,36 @@
+- criar projeto windows form
+- inserir um botao, um combobox e um label
+	- o botao para conectar na porta serial (btnConecta)
+	- o combobox pra selecionar qual porta COM vai usar
+	- o label para avisar se o sistema esta 'ouvindo' ou nao (PODE FALAR | SELECIONE UMA PORTA) (lblStatus)
+
+- precisa inserir um timer para atualizacao das portas COM disponiveis (interval = 1000 -> todo segundo)
+- por ultimo, precisa inserir o componente para comunicacao serial (SerialPort), vai aparecer do lado do timer
+- adicionar codigo para atualizacao das portas COM disponiveis
+- adiciona codigo do timer acionando o metodo das portas (2 cliques no timer)
+- quando vc conectar o arduino ja vai reconhecer a porta automatico
+
+- agora tem fazer a funcionalidade de conectar a porta, atraves do clique do botao conectar
+	- 2 cliques nele para criar o evento
+
+- precisa colocar uma protecao para liberar a porta quando terminar de usar, pq senao outros programas nao irao conseguir usa-la
+	- dentro do evento formClosed (basta ir no campo de eventos do form e dar 2 cliques em cima de FormClosed)
+
+- Adiciona o codigo de reconhecimento de voz (lembrando que precisa ter os comandos corretos 'acender' e 'apagar')
+- a funcionalidade do botao de conectar pode ser por voz tambem, tanto faz
+
+- agora precisamos enviar o comando para o arduino
+	- vamos enviar apenas um digito (1 ou 0) 0 -> apaga e 1 -> acende
+		- criei dois metodos para deixar mais didatico o codigo, mas se quiser nao precisa
+
+
+
+
+
+
+REFERENCIAS
+
+C# usando porta serial
+https://www.embarcados.com.br/comunicacao-serial-c-arduino-parte-1/
+
+Reconhecimento de voz em C# (meu video)
